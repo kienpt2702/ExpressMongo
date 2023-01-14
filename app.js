@@ -27,11 +27,9 @@ app.use(passport.initialize());
 
 app.use(cors({origin: 'https://localhost:3000'}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
+app.use('/users', usersRouter);
 app.use('/dishes', dishRouter);
-app.use('/leaders', leaderRouter);
 app.use('/promos', promoRouter);
 app.use('/imageUpload', uploadRouter);
 
